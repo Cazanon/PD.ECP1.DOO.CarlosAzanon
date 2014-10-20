@@ -1,6 +1,6 @@
 package es.operaciones.CarlosAzanon;
 
-public class Operations {
+public class Operation {
     private Object[] operators = new Object[10];
 
     public void add(Object operator) {
@@ -29,7 +29,10 @@ public class Operations {
                 System.out.print(separator + operando.toString());
                 if (operando.getClass().getSimpleName().equals("Summation")) {
                     result += ((Summation) operando).sum();
-                } else {
+                }else if (operando.getClass().getSimpleName().equals("Multiplication")) {
+                    result += ((Multiplication) operando).multiplicar();
+                } 
+                else {
                     result += ((Subtraction) operando).subtract();
                 }
             }
