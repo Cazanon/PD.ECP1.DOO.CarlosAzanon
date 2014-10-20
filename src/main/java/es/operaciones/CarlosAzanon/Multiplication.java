@@ -1,6 +1,6 @@
 package es.operaciones.CarlosAzanon;
 
-public class Multiplication{
+public class Multiplication extends Operation{
     
     private final int operator1, operator2;
 
@@ -24,6 +24,12 @@ public class Multiplication{
     @Override
     public String toString() {
         return "[" + operator1 + "*" + operator2 + "]";
+    }
+
+    @Override
+    public double calcular() {
+        // TODO Auto-generated method stub
+        return 0;
     }
 
 }

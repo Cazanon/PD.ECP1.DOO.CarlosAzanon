@@ -1,6 +1,6 @@
 package es.operaciones.CarlosAzanon;
 
-public class Subtraction {
+public class Subtraction extends Operation{
     private final int operator1, operator2;
 
     public Subtraction(final int operator1, final int operator2) {
@@ -23,6 +23,12 @@ public class Subtraction {
     @Override
     public String toString() {
         return "[" + operator1 + "-" + operator2 + "]";
+    }
+
+    @Override
+    public double calcular() {
+        // TODO Auto-generated method stub
+        return 0;
     }
 
 }
