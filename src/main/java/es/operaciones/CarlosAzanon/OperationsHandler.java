@@ -1,45 +1,25 @@
 package es.operaciones.CarlosAzanon;
 
+import java.util.ArrayList;
+
 public class OperationsHandler {
     
-    private Object[] operators = new Object[10];
-
-    public void add(Object operator) {
-        for (int i = 0; i < operators.length; i++) {
-            if (operators[i] == null) {
-                operators[i] = operator;
-
-                return;
-            }
-        }
-        return;
+    private ArrayList<Operation> operaciones=new ArrayList<Operation>();
+    
+    public void add(Operation operacion){
+        operaciones.add(operacion);
     }
-
+    
+    public double total(){
+        double total=0;
+        for(Operation operacion : operaciones){
+            total+=operacion.calcular();
+        }
+        return total;
+    }
+    
     public void reset() {
-        for (int i = 0; i < operators.length; i++) {
-            operators[i] = null;
-        }
+        operaciones.clear();
     }
-
-    // MAL DISEÑADO... MAL CODIFICADO
-    public int total() {
-        int result = 0;
-        String separator = "";
-        for (Object operando : operators) {
-            if (operando != null) {
-                System.out.print(separator + operando.toString());
-                if (operando.getClass().getSimpleName().equals("Summation")) {
-                    result += ((Summation) operando).sum();
-                }else if (operando.getClass().getSimpleName().equals("Multiplication")) {
-                    result += ((Multiplication) operando).multiplicar();
-                } 
-                else {
-                    result += ((Subtraction) operando).subtract();
-                }
-            }
-            separator = "+";
-        }
-        System.out.print(">>> ");
-        return result;
-    }
+    
 }
