@@ -22,4 +22,14 @@ public class OperationsHandler {
         operaciones.clear();
     }
     
+    @Override
+    public String toString() {
+        String secuencia="";
+        for(Operation op : operaciones){
+            secuencia+=op.toString()+"+";
+        }
+        secuencia+=" >>>";
+        return secuencia;
+    }
+    
 }

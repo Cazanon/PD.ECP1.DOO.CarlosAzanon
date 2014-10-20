@@ -2,12 +2,12 @@ package es.operaciones.CarlosAzanon;
 
 public class Summation extends Operation{
 
-    public Summation(double operator1,double operator2) {
+    public Summation(int operator1,int operator2) {
         super(operator1,operator2);
     }
 
     @Override
-    public double calcular() {
+    public int calcular() {
         return getOperador1()+getOperador2();
     }
 
