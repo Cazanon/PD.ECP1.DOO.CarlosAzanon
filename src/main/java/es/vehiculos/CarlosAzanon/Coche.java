@@ -2,9 +2,9 @@ package es.vehiculos.CarlosAzanon;
 
 public class Coche extends Vehiculo {
 
-    private final int PORCENTAJE_RANGO_1=100;
-    private final int PORCENTAJE_RANGO_2=80;
-    private final int PORCENTAJE_RANGO_3=50;
+    private final double PORCENTAJE_RANGO_1=100;
+    private final double PORCENTAJE_RANGO_2=80;
+    private final double PORCENTAJE_RANGO_3=50;
     
     private final int MAX_DIAS_RANGO_1=3;
     private final int MAX_DIAS_RANGO_2=7;
@@ -18,7 +18,7 @@ public class Coche extends Vehiculo {
 
     @Override
     public double obtenerPrecio(int dias) {        
-        int precio=0;   
+        double precio=0;   
         if(dias<=MAX_DIAS_RANGO_1){
             precio=dias*(PORCENTAJE_RANGO_1/100)*categoria.getPrecio();
         }else if(dias>MAX_DIAS_RANGO_1 && dias<=MAX_DIAS_RANGO_2){

@@ -6,9 +6,9 @@ public class VehiculosFactory {
         if(tipoVehiculo.equals("Coche A")){
             return new Coche(id,descripcion,new CategoriaA());
         }else if(tipoVehiculo.equals("Coche B")){
-            return new Coche(id,descripcion,new CategoriaA());
+            return new Coche(id,descripcion,new CategoriaB());
         }else if(tipoVehiculo.equals("Coche C")){
-            return new Coche(id,descripcion,new CategoriaA());
+            return new Coche(id,descripcion,new CategoriaC());
         }else if(tipoVehiculo.equals("Moto")){
             return new Moto(id,descripcion);
         }else if(tipoVehiculo.equals("Bicicleta")){
