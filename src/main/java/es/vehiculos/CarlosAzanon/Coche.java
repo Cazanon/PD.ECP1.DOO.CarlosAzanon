@@ -6,4 +6,10 @@ public class Coche extends Vehiculo {
         super(id, descripcion);
     }
 
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
 }
