@@ -18,6 +18,8 @@ public abstract class Vehiculo {
         return descripcion;
     }
      
+    public abstract double obtenerPrecio(int dias);
+    
     @Override
     public abstract String toString();
     
