@@ -1,5 +1,5 @@
 package es.vehiculos.CarlosAzanon;
 
-public class Main {
+public class Coche extends Vehiculo {
 
 }
