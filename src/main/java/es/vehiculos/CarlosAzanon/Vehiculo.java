@@ -21,6 +21,8 @@ public abstract class Vehiculo {
     public abstract double obtenerPrecio(int dias);
     
     @Override
-    public abstract String toString();
+    public String toString() {
+        return "Tipo: "+this.getClass().getSimpleName()+"\tId: "+getId()+"\tDescripcion: "+getDescripcion()+"\n";
+    }
     
 }

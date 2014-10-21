@@ -25,9 +25,4 @@ public class Bicicleta extends Vehiculo{
         return precio;
     }
 
-    @Override
-    public String toString() {
-        return "Tipo: "+this.getClass().getSimpleName()+"\tId: "+getId()+"\tDescripcion: "+getDescripcion()+"\n";
-    }
-
 }
