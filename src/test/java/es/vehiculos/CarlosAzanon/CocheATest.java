@@ -15,7 +15,10 @@ public class CocheATest {
 
     @Test
     public void testObtenerPrecio() {
-        assertEquals(20,c.obtenerPrecio(2),0.1);
+        assertEquals(30,c.obtenerPrecio(3),0.1);
+        assertEquals(38,c.obtenerPrecio(4),0.1);
+        assertEquals(62,c.obtenerPrecio(7),0.1);
+        assertEquals(72,c.obtenerPrecio(9),0.1);
     }
     
 }
