@@ -2,8 +2,6 @@ package es.vehiculos.CarlosAzanon;
 
 import java.util.ArrayList;
 
-
-
 public class GestorVehiculos {
 
     private ArrayList<Vehiculo> vehiculos=new ArrayList<Vehiculo>();
@@ -31,7 +29,14 @@ public class GestorVehiculos {
         }
         return cadena;
     }
+
+    public Vehiculo getVehiculo(int id) {
+        for(Vehiculo v : vehiculos){
+            if(v.getId()==id){
+                return v;
+            }
+        }
+        return null;
+    }
     
-
-
 }
