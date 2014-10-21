@@ -5,12 +5,18 @@ import upm.jbb.IO;
 public class MainVehiculos {
     
     private GestorVehiculos gestor=new GestorVehiculos();
+    private VehiculosFactory creadorVehiculos=new VehiculosFactory();
     
     public void añadirVehiculo() {
         String tipoVehiculo=(String)IO.in.select(gestor.getTiposVehiculos(),"Selecciona tipo de Vehiculo");
         int id=IO.in.readInt("Identificador del vehiculo");
         String descripcion=IO.in.readString("Descripcion del vehiculo");
-        gestor.a
+        Vehiculo v=creadorVehiculos.getVehiculo(tipoVehiculo,id,descripcion);
+        if(gestor.addVehiculo(v)){
+            IO.out.println("Añadido el vehiculo: "+v.toString());
+        }else{
+            IO.out.println("Error añadiendo el vehiculo");
+        }
     }
      
     public void consultarVehiculos(){
@@ -18,7 +24,11 @@ public class MainVehiculos {
     }
     
     public void obtenerAlquiler(){
-        
+        int id=IO.in.readInt("Identificador del vehiculo");
+        int dias=IO.in.readInt("Numero de dias");
+        Vehiculo v=gestor.getVehiculo(id);
+        double precioAlquiler=v.obtenerPrecio(dias);
+        IO.out.println("Alquiler del Vehiculo: "+v.toString()+" >Precio: "+precioAlquiler);
     }
 
     public static void main(String[] args) {
