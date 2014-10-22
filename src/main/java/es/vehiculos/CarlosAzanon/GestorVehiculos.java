@@ -4,8 +4,20 @@ import java.util.ArrayList;
 
 public class GestorVehiculos {
 
+    private static GestorVehiculos gestorVehiculos;    
+    
     private ArrayList<Vehiculo> vehiculos=new ArrayList<Vehiculo>();
     private String[] tiposVehiculos = {"Coche A","Coche B","Coche C","Moto","Bicicleta"}; 
+    
+    private GestorVehiculos(){
+    }
+    
+    public static GestorVehiculos getGestorVehiculos(){
+        if (GestorVehiculos.gestorVehiculos == null) {
+            GestorVehiculos.gestorVehiculos = new GestorVehiculos();
+        }
+        return GestorVehiculos.gestorVehiculos;
+    }
     
     public boolean addVehiculo(Vehiculo vehiculo){
         for(Vehiculo v : vehiculos){
